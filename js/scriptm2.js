@@ -69,12 +69,25 @@
 
 // 9
 
-function getExtremeElements(array) {
-  // Change code below this line
+// function getExtremeElements(array) {
+//   // Change code below this line
 
-return [array[0], 
-array[array.length-1]];
-}
-console.log(getExtremeElements([1, 2, 3, 4, 5]));
-console.log(getExtremeElements(["Earth", "Mars", "Venus"]));
-console.log(getExtremeElements(["apple", "peach", "pear", "banana"]));
+// return [array[0], 
+// array[array.length-1]];
+// }
+// console.log(getExtremeElements([1, 2, 3, 4, 5]));
+// console.log(getExtremeElements(["Earth", "Mars", "Venus"]));
+// console.log(getExtremeElements(["apple", "peach", "pear", "banana"]));
+
+// // 10 
+// function splitMessage(message, delimiter) {
+//   let words;
+  
+//   // Change code below this line
+//   words = message.split(delimiter);
+//   // Change code above this line
+//   return words;
+// }
+// console.log(splitMessage("Mango hurries to the train", " "));
+// console.log(splitMessage("Mango", ""));
+// console.log(splitMessage("best_for_week", "_"));
