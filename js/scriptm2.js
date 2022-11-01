@@ -1,3 +1,4 @@
+"use Strict";
 // const clients = ["Mango", "Ajax", "Poly"];
 
 // for (let i = 0; i < clients.length; i += 1) {
@@ -91,3 +92,53 @@
 // console.log(splitMessage("Mango hurries to the train", " "));
 // console.log(splitMessage("Mango", ""));
 // console.log(splitMessage("best_for_week", "_"));
+
+// 11
+
+// function calculateEngravingPrice(message, pricePerWord) {
+//   // Change code below this line
+
+// let words;
+ 
+//  // Change code below this line
+//  words = message.split(" ").length * pricePerWord;
+//  // Change code above this line
+//  return words;
+// }
+// console.log(calculateEngravingPrice("JavaScript is in my blood", 10));
+// console.log(calculateEngravingPrice("JavaScript is in my blood", 20));
+// console.log(calculateEngravingPrice("Web-development is creative work", 40));
+// console.log(calculateEngravingPrice("Web-development is creative work", 20));
+
+// 12
+
+// function makeStringFromArray(array, delimiter) {
+//   let string;
+//   // Change code below this line
+
+// string = array.join(delimiter);
+
+//   // Change code above this line
+//   return string;
+// }
+// console.log(makeStringFromArray(["Mango", "hurries", "to", "the", "train"], " "));
+// console.log(makeStringFromArray(["M", "a", "n", "g", "o"], ""));
+// console.log(makeStringFromArray(["top", "picks", "for", "you"], "_"));
+
+// 13
+
+
+// function slugify(title) {
+//   // Change code below this line
+
+//   // Change code below this line
+// const slug = title.toLowerCase().split(" ").join("-");
+
+
+//   // Change code above this line
+//   return slug;
+
+//   // Change code above this line
+// }
+// console.log(slugify("Arrays for begginers"));
+
