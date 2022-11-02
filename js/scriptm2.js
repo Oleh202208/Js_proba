@@ -142,3 +142,45 @@
 // }
 // console.log(slugify("Arrays for begginers"));
 
+// 14
+
+// const fruits = ['apple', 'plum', 'pear', 'orange', 'banana'];
+
+// const firstTwoEls = fruits.slice(0, 2);
+// const nonExtremeEls = fruits.slice(1, 4);;
+// const lastThreeEls = fruits.slice(-3);;
+// console.log(nonExtremeEls);
+
+// 15
+
+// const oldClients = ['Mango', 'Ajax', 'Poly', 'Kiwi'];
+// const newClients = ['Peach', 'Houston'];
+
+// const allClients = oldClients.concat(newClients);
+// console.log(allClients);
+
+// 16
+
+// function makeArray(firstArray, secondArray, maxLength) {
+//   // Change code below this line
+// const lastmakeArray = firstArray.concat(secondArray);
+
+// if(lastmakeArray.length > maxLength) {
+// return lastmakeArray, lastmakeArray.slice(0, maxLength);
+// } 
+//   return lastmakeArray;
+// // console.log(fictmakeArray);
+
+// }
+
+// console.log(makeArray(["Mango", "Poly"], ["Ajax", "Chelsea"], 3));
+// console.log(makeArray(["Mango", "Poly", "Houston"], ["Ajax", "Chelsea"], 4));
+// console.log(makeArray(["Mango"], ["Ajax", "Chelsea", "Poly", "Houston"], 3));
+// console.log(makeArray(["Earth", "Jupiter"], ["Neptune", "Uranus"], 2));
+// console.log(makeArray(["Earth", "Jupiter"], ["Neptune", "Uranus"], 4));
+// console.log(makeArray(["Earth", "Jupiter"], ["Neptune", "Uranus", "Venus"], 0));
+
+// 17
+
+
+
