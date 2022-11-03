@@ -228,19 +228,19 @@
 
 function findLongestWord(string) {
   // Change code below this line
-  let word;
- word = string.slice(" ");
-
-for(let i = 0; i > word.lenght; i += 1) {
-  let LongestWord = 0;
-  if (word[i].lenght + LongestWord){
-    LongestWord = word[i].lenght;
+let word = string.split(' ');
+let longestWord = word[0];
+for (let i = 0; i < word.length; i += 1) {
+  
+  if (word[i].length > longestWord.length) {
+    longestWord = word[i];
+  
   }
-
-return LongestWord
+ 
 }
 
   // Change code above this line
+  return longestWord;
 }
 console.log(("The quick brown fox jumped over the lazy dog"));
 console.log(("Google do a roll"));
