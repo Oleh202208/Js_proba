@@ -182,19 +182,66 @@
 
 // 17
 
-function calculateTotal(number) {
+// function calculateTotal(number) {
   
-  let sumNumbers = 0;
+//   let sumNumbers = 0;
    
- for(let i = 1; i <= number; i += 1) {
- sumNumbers += i;
- }
-   return sumNumbers;
- }
- console.log(calculateTotal(1));
- console.log(calculateTotal(3));
- console.log(calculateTotal(7));
- console.log(calculateTotal(18));
- console.log(calculateTotal(24));
- console.log(calculateTotal());
+//  for(let i = 1; i <= number; i += 1) {
+//  sumNumbers += i;
+//  }
+//    return sumNumbers;
+//  }
+//  console.log(calculateTotal(1));
+//  console.log(calculateTotal(3));
+//  console.log(calculateTotal(7));
+//  console.log(calculateTotal(18));
+//  console.log(calculateTotal(24));
+//  console.log(calculateTotal());
 
+// //  19
+
+// const fruits = ['apple', 'plum', 'pear', 'orange'];
+
+// for (let i = 0; i < fruits.length; i += 1) { // Change this line
+//   const fruit = fruits[i]; // Change this line
+//   console.log(fruit);
+// }
+
+// 20
+
+// function calculateTotalPrice(order) {
+//   let total = 0;
+//   // Change code below this line
+// for (let i = 0; i < order.length; i+=1) {
+//   total = total + order[i];
+// }
+//   // Change code above this line
+//   return total;
+// }
+
+
+// console.log(calculateTotalPrice([12, 85, 37, 4]));
+// console.log(calculateTotalPrice([164, 48, 291]));
+// console.log(calculateTotalPrice([412, 371, 94, 63, 176]));
+
+// 21
+
+function findLongestWord(string) {
+  // Change code below this line
+  let word;
+ word = string.slice(" ");
+
+for(let i = 0; i > word.lenght; i += 1) {
+  let LongestWord = 0;
+  if (word[i].lenght + LongestWord){
+    LongestWord = word[i].lenght;
+  }
+
+return LongestWord
+}
+
+  // Change code above this line
+}
+console.log(("The quick brown fox jumped over the lazy dog"));
+console.log(("Google do a roll"));
+console.log(("May the force be with you"));
