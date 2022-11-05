@@ -226,22 +226,36 @@
 
 // 21
 
-function findLongestWord(string) {
-  // Change code below this line
-let word = string.split(' ');
-let longestWord = word[0];
-for (let i = 0; i < word.length; i += 1) {
+// function findLongestWord(string) {
+//   // Change code below this line
+// let word = string.split(' ');
+// let longestWord = word[0];
+// for (let i = 0; i < word.length; i += 1) {
   
-  if (word[i].length > longestWord.length) {
-    longestWord = word[i];
+//   if (word[i].length > longestWord.length) {
+//     longestWord = word[i];
   
-  }
+//   }
  
-}
+// }
+
+//   // Change code above this line
+//   return longestWord;
+// }
+// console.log(("The quick brown fox jumped over the lazy dog"));
+// console.log(("Google do a roll"));
+// console.log(("May the force be with you"));
+
+// 22
+
+function createArrayOfNumbers(min, max) {
+  const numbers = [];
+  // Change code below this line 
+  for(let i = min;  i <= max; i++){
+    numbers.push(i);
+  }
+    
 
   // Change code above this line
-  return longestWord;
+  return numbers;
 }
-console.log(("The quick brown fox jumped over the lazy dog"));
-console.log(("Google do a roll"));
-console.log(("May the force be with you"));
