@@ -1,4 +1,4 @@
-"use Strict";
+
 // const clients = ["Mango", "Ajax", "Poly"];
 
 // for (let i = 0; i < clients.length; i += 1) {
@@ -248,14 +248,170 @@
 
 // 22
 
-function createArrayOfNumbers(min, max) {
-  const numbers = [];
-  // Change code below this line 
-  for(let i = min;  i <= max; i++){
-    numbers.push(i);
-  }
+// function createArrayOfNumbers(min, max) {
+//   const numbers = [];
+//   // Change code below this line 
+//   for(let i = min;  i <= max; i++){
+//     numbers.push(i);
+//   }
     
 
-  // Change code above this line
-  return numbers;
-}
+//   // Change code above this line
+//   return numbers;
+// }
+
+//  23
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//    =================================Додаткове заняття=========================
+
+
+// Напишіть код, який запитуватиме
+// логін за допомогою prompt і буде виводити результат
+// в консоль браузера
+
+// Якщо користувач вводить "Admin",
+// то prompt запитує пароль.
+// Якщо нічого не ввели або натиснута клавіша Esc
+// вивести рядок "Cancel"
+// Інакше вивести рядок "I don't know you"
+
+//Пароль перевіряти так:
+// Якщо введено пароль "I am admin",
+// то вивести рядок "Hello!"
+// інакше виводити рядок "Wrong password!"
+
+
+// ========2 ====
+
+
+// У змінній min лежить число від 0 до 60.
+// Визначте, в яку чверть години потрапляє
+// це число(у першу, другу, третю чи четверту).
+
+
+
+// =======3
+
+// Напишіть через світч пошук автора мови програмування
+// Пишемо назву мови у шаблонному рядку отримує відповідь: мова та автор
+// PHP Расмус Лердорф
+// C# група інженерів компанії Microsoft під керівництвом Андерса Хейлсберга та Скотта Вільтаумота
+// Swift Кріс Латтнер
+// JS Брендан Ейх
+// Java Джеймс Гослінг
+// Python Гвідо ван Россум
+
+// const leng = prompt("Enter program languge");
+// switch(lang?.tolowercace()){
+//   case 'php';
+//   console.log("PHP Расмус Лердорф")
+// }
+
+
+//Напишіть цикл, який виводить у консоль
+//1. числа від max до min за спаданням
+//2. Виведіть у консоль усіх парні числа від min до max
+
+//3. За допомогою циклу for додайте всі парні числа від min до max
+// const max = 90;
+// const min = 33;
+// for (let i = max; i > min; i -= 1){
+// console.log(i)
+// }
+
+// let = 0
+// const max = 90;
+// const min = 33;
+// for (let i = min; i < max; i += 1){
+//   if(i % 2 === 0){
+//     total += i;
+//   }
+// console.log(i)
+// }
+// console.log(total)
+
+
+// Напишіть цикл, який пропонує ввести
+// число більше 100 через prompt.
+// Якщо користувач ввів інше число - попросити
+// ввести ще раз і так далі.
+// Цикл повинен запитувати число, поки користувач не
+// введе число більше 100, або натисне кнопку
+// Скасування в prompt
+
+// let namber = 0;
+// while(namber < 100){
+//   namber = prompt ("ent namber");
+//   if (namber === null){
+//     break;
+//   }
+// }
+
+// Введіть рядок в prompt
+// Виведіть кількість голосних букв в цьому рядку
+
+// =====
+
+
+// Напишіть програму для заміни кожного символу в заданому рядку символом,
+// що йде наступним за ним в алфавіті
+
+// const string = prompt("Entr string");
+// let nextLetterString = ""
+// for( let i = 0; i < string.length; i +=1 ){
+//   // console.log(string[i].charCodeAt()+1);
+//   // console.log(String.fromCharCode(string[i].charCodeAt()+1));
+// const nextLetter = string[i].charCodeAt()+1;
+// nextLetterString += String.fromCharCode(nextLetter);
+// }
+// console.log(nextLetterString);
+
+// const namber = prompt("Entr string");
+// for( let i = 0; i < namber; i+=1){
+//   if( namber % i === 0){
+//     isPrime === false;
+//     break
+//   }
+// }
+// console.log(isPrime);
+
+
+
+
+// ===========
+
+// При завантаженні сторінки користувачеві пропонується
+// в prompt ввести число. Після введення число додається до значення
+// змінної total.
+// Операція введення числа продовжується доти,
+// поки користувач не натисне кнопку Cancel в prompt.
+
+// Після того як користувач припинив введення, натиснувши на
+// кнопку Cancel, показати console.log з рядком "Загальна сума введених чисел дорівнює [число]."
+
+// Зробити перевірку, що користувач ввів саме число,
+// а не довільний набір символів.
+
+// let number;
+// let total = 0;
+// do{
+//   number = prompt("Enter number");
+//   if(isNaN(Number(number))){
+//     continue;
+//   }
+//   total += Number(number);
+// } while(number !== null);
+// console.log(total);
