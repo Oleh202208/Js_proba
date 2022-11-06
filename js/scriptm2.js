@@ -330,23 +330,70 @@
 // }
 // console.log(filterArray([12, 24, 8, 41, 76], 20));
 
-// 28
+// 29
 
-function getEvenNumbers(start, end) {
-  // Change code below this line
-let Number = [];
- for (let i = start; i <= end; i += 1) {
-   if(i % 2 === 0){
-     Number.push[i];
-   }
- }
-return Number;
-   // Change code above this line
- }
+// function getEvenNumbers(start, end) {
+//   // Change code below this line
+// let Number = [];
+//  for (let i = start; i <= end; i += 1) {
+//    if(i % 2 === 0){
+//      Number.push(i);
+//    }
+//  }
+// return Number;
+//    // Change code above this line
+//  }
 
-console.log(getEvenNumbers(2, 5));
+// console.log(getEvenNumbers(2, 5));
 
+// 30
 
+// const start = 6;
+// const end = 27;
+// let number;
+
+// for (let i = start; i < end; i += 1) {
+//   if (i % 5 === 0) {
+//     number = i;
+//     break;
+//   }
+// }
+// console.log(number);
+
+// 31
+
+// function findNumber(start, end, divisor) {
+//   // Change code below this line
+//   let number;
+
+//   for (let i = start; i < end; i += 1) {
+//     if (i % divisor === 0) {
+//       number = i;
+//  return number;
+//     }
+    
+//   }
+
+// }
+// console.log(findNumber(8, 17, 3));
+
+// 32
+// function includes(array, value) {
+//   // Change code below this line
+// let number;
+
+//   for (let number of array) {
+//     if(number === value){
+//       return true;
+//     }
+       
+//   }
+//    return false; 
+//   // Change code above this line
+// }
+// console.log(includes([1, 2, 3, 4, 5], 3));
+// console.log(includes([1, 2, 3, 4, 5], 17));
+// console.log(includes(["Earth", "Mars", "Venus", "Jupiter", "Saturn"], "Jupiter"));
 
 
 
