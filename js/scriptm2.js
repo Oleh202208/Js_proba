@@ -236,7 +236,7 @@
 //     longestWord = word[i];
   
 //   }
- 
+
 // }
 
 //   // Change code above this line
@@ -262,9 +262,17 @@
 
 //  23
 
+function filterArray(numbers, value) {
 
-
-
+  let arrat = [];
+  for( let i = 0; i < numbers.length; i +=1){
+    if(numbers[i] > value){
+      arrat.push(numbers[i]);
+    }
+  }
+  return arrat;
+}
+  
 
 
 
