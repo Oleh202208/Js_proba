@@ -98,6 +98,33 @@
 // apartment.area = 60;
 // apartment.rooms = 3;
 // apartment.location = {};
-// apartment.location.country = "Jamaica";
-// apartment.location.city = "Kingston";
+// // apartment.location.country = "Jamaica";
+// // apartment.location.city = "Kingston";
+
+// // 9
+// const emailInputName = "email";
+// const passwordInputName = "password";
+
+// const credentials = {
+//   // Change code below this line
+
+//   [emailInputName]: "henry.carter@aptmail.com",
+//   [passwordInputName]: "jqueryismyjam",
+
+// };
+
+// 10
+// const apartment = {
+//   descr: "Spacious apartment in the city center",
+//   rating: 4,
+//   price: 2153,
+// };
+// const keys = ["descr", "rating", "price"];
+// const values = ["Spacious apartment in the city center", 4, 2153];
+// // Change code below this line
+//  for (const key in apartment) {
+   
+//  }
+
+// 11
 
