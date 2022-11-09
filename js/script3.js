@@ -277,3 +277,63 @@
 
 // 20
 
+// const products = [
+//   { name: "Radar", price: 1300, quantity: 4 },
+//   { name: "Scanner", price: 2700, quantity: 3 },
+//   { name: "Droid", price: 400, quantity: 7 },
+//   { name: "Grip", price: 1200, quantity: 9 },
+// ];
+
+// function calculateTotalPrice(productName) {
+//   // Change code below this line
+// let totalPrice = 0;
+//   for(let product of products){
+//     if(productName === product.name){
+//       totalPrice = product.price * product.quantity;
+//     }
+ 
+//   }
+//   return totalPrice;
+// }
+// console.log(calculateTotalPrice("Blaster"))
+// console.log(calculateTotalPrice("Radar"))
+// console.log(calculateTotalPrice("Droid"))
+// console.log(calculateTotalPrice("Grip"))
+// console.log(calculateTotalPrice("Scanner"))
+
+// // 21
+// const highTemperatures = {
+//   yesterday: 28,
+//   today: 26,
+//   tomorrow: 33,
+// };
+// // Change code below this line
+// const {yesterday,today,tomorrow} = highTemperatures;
+
+// //  коментуєм, що було)))
+// // const yesterday = highTemperatures.yesterday;
+// // const today = highTemperatures.today;
+// // const tomorrow = highTemperatures.tomorrow;
+
+// // Change code above this line
+// const meanTemperature = (yesterday + today + tomorrow) / 3;
+
+// 22
+// const highTemperatures = {
+//   yesterday: 28,
+//   today: 26,
+//   tomorrow: 33,
+// };
+// // Change code below this line
+// const {yesterday,
+//        today,
+//        tomorrow,
+//        icon = "https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg"} = highTemperatures;
+// // const yesterday = highTemperatures.yesterday;
+// // const today = highTemperatures.today;
+// // const tomorrow = highTemperatures.tomorrow;
+// // const icon = highTemperatures.icon;
+// // Change code above this line
+// const meanTemperature = (yesterday + today + tomorrow) / 3;
+
+// 23
