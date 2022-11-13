@@ -439,8 +439,74 @@
 // // застосувати перевизначені налаштування
 // const finalSettings = {...defaultSettings, ...overrideSettings};
 
-// 30
+// 31
+// function addOverNum(a, ...args) {
+//   let total = 0;
 
+//   for (const arg of args) {
+//     if(a < arg){
+//       total += arg;
+//     }   
+//   }
+//  return total;
+ 
+// }
+// console.log(addOverNum(14, 32, 6, 13, 19, 8));
 
+// 33
+
+// function findMatches([...args], ...anyArgs) {
+//   const matches = []; // Don't change this line
+// for (const arg of args) {
+//   if(anyArgs.includes(arg)) {
+//     matches.push(arg);
+//   }
+  
+// }
+// return matches;
+// }
+
+// console.log(findMatches([10, 24, 41, 6, 9, 19], 24, 11, 9, 23, 41));
+
+// 34
+// const bookShelf = {
+//   // Change code below this line
+//   books: ["The last kingdom", "The guardian of dreams"],
+//   getBooks() {
+//     return "Returning all books";
+//   },
+//   addBook(bookName) {
+//     return `Adding book ${bookName}`;
+//   },
+//  removeBook(bookName) {
+//    return `Deleting book ${bookName}`;
+//  },
+//   updateBook(oldName, newName){
+//     return `Updating book ${oldName} to ${newName}`;
+//   },
+// };
+
+// 35
+
+// const bookShelf = {
+//   books: ["The last kingdom", "Haze", "The guardian of dreams"],
+//   updateBook(oldName, newName) {
+//     // Change code below this line
+//     const bookIndex = this.books.indexOf(oldName);
+//     this.books.splice(bookIndex, 1, newName);
+    
+// },
+// };
+
+// 39
+
+// const atTheOldToad = {
+//   potions: ["Speed potion", "Dragon breath", "Stone skin"],
+//   removePotion(potionName) {
+//     // Change code below this line
+//     const potionIndex = this.potions.indexOf(potionName);
+// return this.potions.splice(potionIndex, 1);
+//   },
+// };
 
 
