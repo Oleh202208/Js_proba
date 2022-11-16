@@ -82,4 +82,24 @@
   // }
   // console.log(getCommonElements([10, 20, 30, 40], [4, 30, 17, 10, 40]))
 
-// 8
+// 10
+// const calculateTotalPrice = orderedItems => {
+//   let totalPrice = 0;
+//  orderedItems.forEach(orderedItems => 
+//  totalPrice += orderedItems);
+//  return totalPrice;
+// }
+
+// 11
+
+const filterArray = (numbers, value) => {
+  const filteredNumbers = [];
+   numbers.forEach(number  => {
+    if(number > value)
+  filteredNumbers.push(number);
+  });
+   return filteredNumbers;
+}
+ 
+console.log(filterArray([1, 2, 3, 4, 5], 3));
+
