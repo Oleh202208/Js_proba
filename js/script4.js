@@ -92,14 +92,58 @@
 
 // 11
 
-const filterArray = (numbers, value) => {
-  const filteredNumbers = [];
-   numbers.forEach(number  => {
-    if(number > value)
-  filteredNumbers.push(number);
-  });
-   return filteredNumbers;
-}
+// const filterArray = (numbers, value) => {
+//   const filteredNumbers = [];
+//    numbers.forEach(number  => {
+//     if(number > value)
+//   filteredNumbers.push(number);
+//   });
+//    return filteredNumbers;
+// }
  
-console.log(filterArray([1, 2, 3, 4, 5], 3));
+// console.log(filterArray([1, 2, 3, 4, 5], 3));
 
+
+// // 13
+// function changeEven(numbers, value) {
+ 
+//   const newNumbers = [];
+//   numbers.forEach(numbers => {
+//     if(numbers % 2 == 0){
+//       newNumbers.push(numbers + value);
+     
+//     }else {
+//        newNumbers.push(numbers);
+//     }
+    
+//   })
+//   return newNumbers;
+// }
+// console.log(changeEven([2, 8, 3, 7, 4, 6], 10))
+
+// // 20
+// const books = [
+//   {
+//     title: "The Last Kingdom",
+//     author: "Bernard Cornwell",
+//     genres: ["adventure", "history"],
+//   },
+//   {
+//     title: "Beside Still Waters",
+//     author: "Robert Sheckley",
+//     genres: ["fiction", "mysticism"],
+//   },
+//   {
+//     title: "Redder Than Blood",
+//     author: "Tanith Lee",
+//     genres: ["horror", "mysticism", "adventure"],
+//   },
+// ];
+// const allGenres = books.flatMap(books => books.genres);
+// const uniqueGenres = allGenres.filter((allGenres, index, array) => array.indexOf(allGenres) === index);
+
+// 23
+// const getUsersWithAge = (users, minAge, maxAge) => {
+//   const newName = users.filter(({age}) => age >= minAge && age < maxAge)
+//   return newName
+//   };
