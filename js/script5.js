@@ -164,18 +164,99 @@
 
 
 
-const objA = {
-  name: `User A`,
-    getName () {
-      console.log(this.name)
-    }
-  }
+// const objA = {
+//   name: `User A`,
+//     getName (age, city) {
+//       console.log(`getName`, arguments)
+//       console.log(`Hellow my name ${this.name}, I'm yaers ${age},
+//        I'm from ${city}.` )
+//     }
+//   }
+// const objB = {
+//   name: `User B`,
+//   }
+// const objC = {
+//   name: `User C`,
+//   }
 
-const objB = {
-  name: `User B`,
-  }
+
+// const foo = objA.getName.bind(objB, 19, `Kyiv`);
+// console.log(foo)
+// foo()
+// foo(23, `Lviv`)
+
+// objA.getName()
+
+// const arr = [23, `Odessa`];
+//   objA.getName.call(objB, 33, `Lviv`)
+//   objA.getName.apply(objC, arr)
+//   objA.getName.call(objB, ...arr)
 
 
-const objC = {
-  name: `User C`,
-  }
+// const chopShop = {
+//   stones: [ {
+//     name: `Emerald`,
+//     price: 1300,
+//     quantity: 4
+//   },
+//   {
+//     name: `Diamond`,
+//     price: 2700,
+//     quantity: 3
+//   },
+//   {
+//     name: `Sapphire`,
+//     price: 1400,
+//     quantity: 7
+//   },
+//   {
+//     name: `Ruby`,
+//     price: 800,
+//     quantity: 2
+//   },
+// ],
+// calcTotalPrice(stoneName) {
+// const stone = this.stones.find(({name}) => name.toLocaleLowerCase() === stoneName.toLocaleLowerCase())
+// // console.log(stone);
+// if(stone){
+// const {price, quantity} = stone
+// return price * quantity
+// }
+//   return `Empty`
+
+// },
+
+// };
+
+// console.log(chopShop.calcTotalPrice(`Emerald`));
+// console.log(chopShop.calcTotalPrice(`Diamond`));
+// console.log(chopShop.calcTotalPrice(`Sapphire`));
+// console.log(chopShop.calcTotalPrice(`Ruby`));
+// console.log(chopShop.calcTotalPrice(`Black`));
+
+const phoneboock = {
+  contacts: [],
+  add(contacts) {
+    const newContact = {
+      list: `defauld`,
+      ...contacts,
+      id: this.generateId(),
+      createdAt: this.getDate(),
+    };
+    this.contacts.push(newContact);
+  },
+  generateId() {
+    return '_' + Math.random().toString(36).substr(2, 9);
+  },
+  getDate() {
+    return new Date();
+  },
+};
+
+phoneboock.add({
+name: `Mango`,
+email: `Mango@gmail.com`,
+list: `friends`
+})
+
+console.log(phoneboock.contacts)
