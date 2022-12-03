@@ -232,31 +232,45 @@
 // console.log(chopShop.calcTotalPrice(`Diamond`));
 // console.log(chopShop.calcTotalPrice(`Sapphire`));
 // console.log(chopShop.calcTotalPrice(`Ruby`));
-// console.log(chopShop.calcTotalPrice(`Black`));
+// // console.log(chopShop.calcTotalPrice(`Black`));
 
-const phoneboock = {
-  contacts: [],
-  add(contacts) {
-    const newContact = {
-      list: `defauld`,
-      ...contacts,
-      id: this.generateId(),
-      createdAt: this.getDate(),
-    };
-    this.contacts.push(newContact);
-  },
-  generateId() {
-    return '_' + Math.random().toString(36).substr(2, 9);
-  },
-  getDate() {
-    return new Date();
-  },
+// const phoneboock = {
+//   contacts: [],
+//   add(contacts) {
+//     const newContact = {
+//       list: `defauld`,
+//       ...contacts,
+//       id: this.generateId(),
+//       createdAt: this.getDate(),
+//     };
+//     this.contacts.push(newContact);
+//   },
+//   generateId() {
+//     return '_' + Math.random().toString(36).substr(2, 9);
+//   },
+//   getDate() {
+//     return new Date();
+//   },
+// };
+
+// phoneboock.add({
+// name: `Mango`,
+// email: `Mango@gmail.com`,
+// list: `friends`
+// })
+
+// console.log(phoneboock.contacts)
+
+const calculator = {
+read(a=0, b=0) {
+  if(!isNaN(a) && !isNaN (b)){
+    this.a = a;
+    this.b = b;
+  } else{
+    alert ('Будьласка вкажіть значення a та b')
+  }
+
+}
 };
-
-phoneboock.add({
-name: `Mango`,
-email: `Mango@gmail.com`,
-list: `friends`
-})
-
-console.log(phoneboock.contacts)
+calculator.read(0,2);
+console.log(calculator)
