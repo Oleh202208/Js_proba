@@ -272,8 +272,55 @@
 
 // },
 // add() {
-
+// return this.a + this.b
+// },
+// mult(){
+//   return this.a * this.b
 // }
 // };
 // calculator.read('12',44);
-// console.log(calculator)
+// console.log(calculator.add());
+// console.log(calculator.mult())
+
+
+
+// ======= Prototype========
+
+// const arr = [1,2,3,4,5];
+// // console.log(arr.map());
+
+// const obj = {
+//   name: "User obj"
+// }
+// console.log(obj);
+
+
+// function sayHello(name) {
+//   console.log(`Hi my name is ${name}, from castom function `);
+// }
+
+// String.prototype.qwerty = sayHello;
+
+// const str = "dfdfgds";
+// console.log(typeof str)
+// str.qwerty('Artem')
+
+
+// ======= Clas=======
+
+class User {
+  constructor(name, email, age){
+this.name = name;
+this.email = email;
+this.age = age;
+  }
+  getName(){
+    console.log(this.name)
+  }
+}
+
+const ObjA = new User ("User A", 'test@gmail.com', 18);
+const ObjB = new User ("User B", 'test@gmail.com', 30)
+
+console.log('ObjA', ObjA);
+console.log('ObjB', ObjB);
