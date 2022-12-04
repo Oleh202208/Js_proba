@@ -261,16 +261,19 @@
 
 // console.log(phoneboock.contacts)
 
-const calculator = {
-read(a=0, b=0) {
-  if(!isNaN(a) && !isNaN (b)){
-    this.a = a;
-    this.b = b;
-  } else{
-    alert ('Будьласка вкажіть значення a та b')
-  }
+// const calculator = {
+// read(a=0, b=0) {
+//   if(!isNaN(a) && !isNaN (b)){
+//     this.a = Number(a);
+//     this.b = Number(b);
+//   } else{
+//     alert ('Будьласка вкажіть значення a та b')
+//   }
 
-}
-};
-calculator.read(0,2);
-console.log(calculator)
+// },
+// add() {
+
+// }
+// };
+// calculator.read('12',44);
+// console.log(calculator)
