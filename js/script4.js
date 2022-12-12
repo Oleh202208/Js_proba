@@ -372,8 +372,8 @@
 //     .sort((a, b) => a.localeCompare(b))
 //   };
   
-// 48
-const getTotalBalanceByGender = (users, gender) => {
-  return [...users].filter(users => users.gender === gender)
-    .reduce((totalBalance, user) => totalBalance + user.balance, 0)    
-  };
+// // 48
+// const getTotalBalanceByGender = (users, gender) => {
+//   return [...users].filter(users => users.gender === gender)
+//     .reduce((totalBalance, user) => totalBalance + user.balance, 0)    
+//   };
