@@ -308,19 +308,64 @@
 
 // ======= Clas=======
 
-class User {
-  constructor(name, email, age){
-this.name = name;
-this.email = email;
-this.age = age;
+// class User {
+//   constructor(name, email, age){
+// this.name = name;
+// this.email = email;
+// this.age = age;
+//   }
+//   getName(){
+//     console.log(this.name)
+//   }
+// }
+
+// const ObjA = new User ("User A", 'test@gmail.com', 18);
+// const ObjB = new User ("User B", 'test@gmail.com', 30)
+
+// console.log('ObjA', ObjA);
+// console.log('ObjB', ObjB);
+
+
+const content = document.querySelector('.content');
+const wins = [
+  [1,2,3],
+[4,5,6],
+[7,8,9],
+[1,5,9],
+[3,5,7],
+[3,6,9],
+[1,4,7],
+];
+const stepX = [];
+const stepO = [];
+let markup = '';
+let player = 'X';
+for(let i =1; i<= 9; i += 1) {
+  markup += `<div class='item' data-id='${i}'></div>`
+}
+content.insertAdjacentHTML('beforeend', markup);
+content.addEventListener('click', onClick);
+
+function onClick(evt) {
+  if(!evt.target.classList.contains('item')) {
+    return;
   }
-  getName(){
-    console.log(this.name)
+  if(evt.target.textContent) {
+    return;
   }
+const currentId = Number( evt.target.dataset.id);
+
+if(player === 'X') {
+  stepX.push(currentId)
+}else{
+  stepO.push(currentId)
 }
 
-const ObjA = new User ("User A", 'test@gmail.com', 18);
-const ObjB = new User ("User B", 'test@gmail.com', 30)
+  evt.target.textContent = player;
+  player = player === 'X' ? 'O' : 'X'; 
 
-console.log('ObjA', ObjA);
-console.log('ObjB', ObjB);
+}
+
+function isWinner(arr) {
+return wins.some(item => item.every(id =>arr.includes(id)))
+}
