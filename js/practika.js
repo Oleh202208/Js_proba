@@ -204,3 +204,231 @@
 
 
 
+// 17.12++++++++++++++=======================
+
+// За допомогою методу forEach потрібно заповнити масив uploadedFiles
+// baseUrl потрібно передати, як this
+
+// const imagesName = ['car.png', 'grass.png', 'avatar.png', 'user.png', 'sea.png', 'water.png', 'bird.png'];
+// const baseUrl = {domain: 'domain-name.com'};
+// let uploadedFiles = [];
+
+// const resultUploadedFiles = [
+//   'domain-name.com/upload/car.png',
+//   'domain-name.com/upload/grass.png',
+//   'domain-name.com/upload/avatar.png',
+//   'domain-name.com/upload/user.png',
+//   'domain-name.com/upload/sea.png',
+//   'domain-name.com/upload/water.png',
+//   'domain-name.com/upload/bird.png'
+// ];
+
+// imagesName.forEach(function(imags){
+//   const src = `${this.domain}/upload/${imags}`
+//   // uploadedFiles.push(src)
+
+// }, baseUrl)
+// console.log(uploadedFiles)
+
+
+// // uploadedFiles = imagesName.map(imags =>  `${baseUrl.domain}/upload/${imags}`)
+
+
+// uploadedFiles = imagesName.reduce((acc, image)=> [...acc, `${baseUrl.domain}/upload/${image}`],[])
+// console.log(uploadedFiles)
+
+//  задача 2
+
+// Напишіть функцію addItemToBasket, яка буде за допомогою методу find перевіряти, чи є вже такий продукт в кошику
+// Якщо він є, то потроібно оновити його в коризні
+// Якщо немає, то потрібно додати новий продукт до кошику покупок
+
+// Після цього порахувати суму всіх покупок і вивести total;
+
+// let total = 0;
+
+// const tShirt = {
+//   id: 33,
+//   title: 'T-shirt',
+//   price: 99,
+//   count: 1,
+// }
+
+// const jeans = {
+//   id: 29,
+//   title: 'Jeans',
+//   price: 199,
+//   count: 1,
+// }
+
+
+// let basketItems = [
+//   {
+//     id: 28,
+//     title: 'iPhone 14',
+//     price: 1599,
+//     count: 3,
+//   },
+//   {
+//     id: 29,
+//     title: 'Jeans',
+//     price: 199,
+//     count: 2,
+//   }
+// ];
+
+
+// function addItemToBasket (product){
+// const activProduct = basketItems.find(item => item.id === product.id)
+// console.log(activProduct)
+// if(activProduct){
+// return basketItems.map(item => {
+//   if(item.id === product.id){
+//     return {
+//       ...item,
+//       count: item.count +1,
+//     };
+//   }else{
+//     return item;
+//   }
+// })
+// }else{
+//   return 
+// }
+// }
+
+// basketItems = addItemToBasket(tShirt);
+// basketItems = addItemToBasket(jeans);
+
+// total = basketItems.reduce((sum, {count, price})=> sum + count * price, 0)
+// console.log(total)
+
+// задача 3
+
+
+// / Потрібно отримати URL адресу із адресного рядка бразуера.
+// // Далі необхідно параметри запиту записати в об'єкт  (query) - ключ, значення (axios)
+
+// const link = 'https://www.npmjs.com/?query=axios&version=0.3&module=render&size=32&date=12212183311'
+// const url = new URL(link)
+// console.log(url);
+// const {serch} = url;
+// console.log(serch.slice(1));
+// const params = serch.slice('&')
+// .reduce((acc,string => {
+//   console.log(acc)
+//   console.log(string)
+//   const [key, value] = string.split('=')
+//   acc[key] = value;
+//   return acc;
+// },[]));
+// console.log(params);
+
+// задача 4
+
+// // Напишіть метод, який очищає масив від усіх непотрібних елементів, таких як false, undefined, порожні рядки, нуль, null
+
+// const data = [0, 1, false, 2, undefined, '', 3, null];
+// console.log(compact(data)) // [1, 2, 3]
+
+// function compact (data) {
+//   return data.filter(item => item)
+//   return data.filter(Boolean)
+// }
+
+
+
+// let basketItems = [
+//   {
+//     id: 28,
+//     title: 'iPhone 14',
+//     price: 1599,
+//     count: 3,
+//   },
+//   {
+//     id: 29,
+//     title: 'Jeans',
+//     price: 199,
+//     count: 2,
+//   },
+// {
+//   id: 33,
+//   title: 'T-shirt',
+//   price: 99,
+//   count: 1,
+// }
+// ];
+
+// function removeFromBasket(id){
+// return basketItems.filter(item => item.id !== id);
+// }
+// console.log(basketItems);
+// basketItems = removeFromBasket(29)
+// console.log(basketItems);
+
+
+// Розробники люблять скорочувати все:
+//   k8s означає Kubernetes, a11y означає accessibility, l10n означає localization.
+//   Ви отримуєте нумероніми Dev, беручи першу та останню букви та підраховуючи кількість букв між ними.
+//   Слова, що містять менше 4 літер, не скорочуються, тому що це було б просто дивно.
+//   Змінна input  є реченням, і ви повинні скорочувати кожне слово довжиною 4 літери або більше.
+//   У реченні не буде розділових знаків. g2d l2k e6e
+
+
+
+// const input = 'Every developer likes to mix kubernetes and javascript';
+// function shortSentence (str){
+//   const arr = str.spli(' ');
+//   arr.map(word => {
+//     if(AudioWorkletNode.length < 4) {
+// return word;
+//     }else{
+//       return `${word[0]}${word.length - 2}${word[word.length -1]}`
+//     }
+
+//   }).join(' ')
+  
+// }
+
+// Result
+// 'E3y d7r l3s to mix k8s and j8t'
+
+
+
+//  Отримайте ініціали імені
+// Даний рядок із кількох слів із одним пробілом між кожним із них. Скоротіть назву та поверніть ініціали імені.
+
+
+// const input = 'George Raymond Richard Martin';
+
+
+
+// Result
+// 'GRRM'\
+
+// задача ====
+
+// Напишіть функцію sortByAge(users), яка приймає масив об'єктів із властивістю age та сортує їх за ним.
+// Наприклад:
+//
+let bruce = {name: "Bruce", age: 25};
+let jhon = { name: "Jhon", age: 30};
+let maria = { name: "Maria", age: 28};
+//
+let arr = [ bruce, jhon, maria ];
+
+sortByAge(arr);
+
+function sortByAge(arr){
+  // arr.sort(({age}, {age: nextAge})=>age - nextAge
+  arr.sort((prev, next)=> prev.age > next.age? -1:1)
+ 
+}
+
+console.log(arr)
+
+//
+// // тепер: [bruce, maria, jhon]
+// alert(arr[0].name); // Bruce
+// alert(arr[1].name); // Maria
+// alert(arr[2].name); // Jhon
