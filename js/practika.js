@@ -411,21 +411,21 @@
 // Напишіть функцію sortByAge(users), яка приймає масив об'єктів із властивістю age та сортує їх за ним.
 // Наприклад:
 //
-let bruce = {name: "Bruce", age: 25};
-let jhon = { name: "Jhon", age: 30};
-let maria = { name: "Maria", age: 28};
-//
-let arr = [ bruce, jhon, maria ];
+// let bruce = {name: "Bruce", age: 25};
+// let jhon = { name: "Jhon", age: 30};
+// let maria = { name: "Maria", age: 28};
+// //
+// let arr = [ bruce, jhon, maria ];
 
-sortByAge(arr);
+// sortByAge(arr);
 
-function sortByAge(arr){
-  // arr.sort(({age}, {age: nextAge})=>age - nextAge
-  arr.sort((prev, next)=> prev.age > next.age? -1:1)
+// function sortByAge(arr){
+//   // arr.sort(({age}, {age: nextAge})=>age - nextAge
+//   arr.sort((prev, next)=> prev.age > next.age? -1:1)
  
-}
+// }
 
-console.log(arr)
+// console.log(arr)
 
 //
 // // тепер: [bruce, maria, jhon]
