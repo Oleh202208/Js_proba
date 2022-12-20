@@ -422,7 +422,7 @@
 // function sortByAge(arr){
 //   // arr.sort(({age}, {age: nextAge})=>age - nextAge
 //   arr.sort((prev, next)=> prev.age > next.age? -1:1)
- 
+
 // }
 
 // console.log(arr)
