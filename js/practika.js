@@ -432,3 +432,352 @@
 // alert(arr[0].name); // Bruce
 // alert(arr[1].name); // Maria
 // alert(arr[2].name); // Jhon
+
+
+
+
+
+
+
+// =======  14.01.2023==========
+
+// Напишіть код JavaScript, щоб кубик рухався, коли настискати стрілки вверх, вниз, вілво, вправо
+
+// <!DOCTYPE html>
+// <html>
+// <head>
+// <meta charset=utf-8 />
+//   <title>Change the content of a cell</title>
+// <style>
+//   .cube {
+//   position: absolute;
+//   width: 50px;
+//   height: 50px;
+//   background: green;
+// }
+// </style>
+// </head>
+// <body>
+
+// <div class="cube" style="top: 0; left: 0;"></div>
+// </body>
+// </html>
+
+
+//  2
+
+// Змініть стиль тексту абзацу за допомогою коду JavaScript
+//
+// <!DOCTYPE html>
+// <html>
+// <head>
+// <meta charset=utf-8 />
+//   <title>JS DOM paragraph style</title>
+// </head>
+// <body>
+/* <p id ='text'>JavaScript Exercises</p>
+<div>
+  <button id="jsstyle">Style</button>
+</div> */
+// </body>
+// </html>
+//
+// При натисканні на кнопку буде змінено шрифт, розмір шрифту та колір тексту абзацу
+// При наступному натисканні кнопки cтилі будуть знову змінюватись
+// Після кожного кліку будуть підставлятись нові значення із масивів colors, fonts, fontSizes  послідовно
+
+// const colors = ['gold', 'green', 'yellow', 'blue', 'black', 'brown', 'purple'];
+// const fonts = ['Arial', 'Roboto', 'Open Sans', 'Montserrat', 'Noto Sans', 'Raleway', 'Lato'];
+// const fontSizes = ['12px', '3rem', '15px', '4em', '24px', '48px', '8em'];
+
+// const text = document.querySelector('#text');
+// const btn = document.querySelector('#jsstyle');
+
+// btn.addEventListener('click', onClick);
+// let i = 0;
+// function onClick(evt){
+//   if(colors.length <= i){
+//     i=0
+//   }
+// text.style.color = colors[i]
+// text.style.fontFamily = fonts[i]
+// text.style.fontSize = fontSizes[i]
+// i +=1;
+// }
+
+// console.log(text.style)
+
+
+// 3
+
+// Напишіть програму JavaScript для добавлення та видалення елементів зі спадного списку.
+
+// <!DOCTYPE html>
+// <html><head>
+// <meta charset=utf-8 />
+//   <title>Remove items from a dropdown list</title>
+// </head>
+// <body>
+// <form class="js-form">
+//   <select id="colorSelect">
+//     <option>Red</option>
+//     <option>Green</option>
+//     <option>White</option>
+//     <option>Black</option>
+//   </select>
+//   <input id="removeOption" type="button" value="Select and Remove">
+//     <br/>
+//     <br/>
+//     <br/>
+//     <label htmlFor="add">Add new option</label> <br/>
+//     <input id="add" type="text" placeholder="New option">
+//     <input id="addOption" type="button" value="Add option">
+// </form>
+// </body>
+// // </html>
+
+// const form = document.querySelector('js-form');
+// const input = document.querySelector('#removeOption');
+// const select = document.querySelector('#colorSelect');
+
+// const inputAdd = document.querySelector('#add');
+// const inputBtn = document.querySelector('#addOption');
+
+// input.addEventListener('click', onRemOption)
+
+// function onRemOption(){
+//   console.log(select)
+
+//   select.selectedOptions[0].remove();
+// }
+
+// inputBtn.addEventListener('click', onAddOption);
+// function onAddOption(){
+//   let {value} = inputAdd;
+// if(value.trim() === ''){
+//   return;
+// }
+//   const option = document.createElement('option')
+//   option.textContent = value;
+//   select.appendChild(option)
+//   inputAdd.value = '';
+
+// // другий варіант
+//    // const option = `<option>${value}</option>`;
+//   // select.insertAdjacentHTML('beforeend', option)
+// }
+
+
+// 4 задача
+
+// Делегування подій
+// 1. Коли користувач клікає на будь-яку комірку із таблиці, потрібно її зробити активною - добавити клас .active
+// 2. Коли користувач клікає на іншу комірку, вона робиться активною, а всі інші стають неактивними
+// 3. Після перезавантаження сторінки активна комірка зберігається
+
+/* <style>
+  table {
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+
+  td {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+</style>
+
+<body>
+<div class="board">
+  <table>
+    <tbody>
+    <tr style="display: block;">
+      <td></td>
+      <td></td>
+      <td class="active"></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr style="display: block;">
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr style="display: block;">
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr style="display: block;">
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr style="display: block;">
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr style="display: block;">
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr style="display: block;">
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr style="display: block;">
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr style="display: block;">
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr style="display: block;">
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    </tbody>
+  </table>
+</div> */
+
+// const board = document.querySelector('.board');
+
+// board.addEventListener('click',onClickBoard)
+
+// function onClickBoard(evt){
+//   console.log('onClickBoard')
+
+//   if(evt.target.tagName === 'TD'){
+//     evt.target.style.background = 'green';
+//   }
+// }
+// const activeTd = document.querySelector('.active');
+
+// activeTd.addEventListener('click', onClickTd);
+// function onClickTd(evt){
+//   evt.target.style.background = 'red';
+// }
+
+// 5 задача
+
+// / Напишіть програму JavaScript, щоб виділяти жирні слова (<strong>) наступного абзацу, наводячи курсор миші на посилання
+
+// // <head>
+// //   <meta charSet="UTF-8">
+// //     <title>Get And Style All Tags</title>
+// // </head>
+// // <body>
+// // <p>[<a href="#" class="js-link">On mouse over here bold words of the following
+// //   paragraph will be highlighted</a>]</p>
+// // <p><strong>We</strong> have just started <strong>this</strong> section for the users (<strong>beginner</strong> to
+// //   intermediate) who <strong>want</strong> to work with <strong>various</strong> JavaScript <strong>problems</strong> and
+// //   write scripts online to <strong>test</strong> their JavaScript <strong>skill</strong>.</p>
+// // </body>
+
+// const link = document.querySelector('js-link');
+// const text = document.querySelector('js-text');
+// link.addEventListener('mouseover')
+
+// function onHovetEl(evt){
+//   console.log(evt)
+// }
+
+// link.addEventListener('mooseout', onHoverQut)
+
+// function onHoverQut(evt){
+//   console.log(evt)
+// }
+
+// function changeColor(color)(
+//   const list = text.querySelectorAll('strong')
+// )
+
+// задача 6
+
+// Напишіть програму JavaScript TodoList для добавлення нових завдань у список
+
+// <form>
+//   <label htmlFor="add">Add new task</label> <br/>
+//   <input id="add" type="text" placeholder="New task">
+//     <input id="addTask" type="button" value="Add task">
+//
+//       <ul id="tasks"></ul>
+// </form>
+//
