@@ -781,3 +781,46 @@
 //       <ul id="tasks"></ul>
 // </form>
 //
+
+
+
+// const postToAdd = {
+//   author: "Mango",
+//   body: "CRUD is awesome",
+//   liks: '45',
+//   title: 'Book history',
+// };
+// const postToAdd1 = {
+//   author: "Mango",
+//   body: "CRUD is already",
+//   liks: '34',
+//   title: 'Book rest',
+// };
+
+// const options = {
+//   method: "POST",
+//   body: JSON.stringify(postToAdd),
+//   headers: {
+//     "Content-Type": "application/json; charset=UTF-8",
+//   },
+// };
+
+// const options1 = {
+//   method: "POST",
+//   body: JSON.stringify(postToAdd1),
+//   headers: {
+//     "Content-Type": "application/json; charset=UTF-8",
+//   },
+// };
+
+
+
+// fetch("https://jsonplaceholder.typicode.com/posts", options)
+//   .then(response => response.json())
+//   .then(post => console.log(post))
+//   .catch(error => console.log(error));
+
+//   fetch("https://jsonplaceholder.typicode.com/posts", options1)
+//   .then(response => response.json())
+//   .then(post => console.log(post))
+//   .catch(error => console.log(error));
