@@ -1,4 +1,6 @@
 
+// Завдання 1
+
 // Отримати дані з API і вивести їх на сторінку
 // https://dog.ceo/dog-api/
 
@@ -6,28 +8,32 @@
 
 // const btn = document.querySelector('.fetch');
 // const input = document.querySelector('.input');
+// const ul = document.querySelector('.js-ul')
 
 // btn.addEventListener('click', onBtnClick);
 
 // function onBtnClick(e){
-//   e.preventDefaunt();
+//   e.preventDefault();
 
 //   const value = input.value.trim();
 
 //   fetch(`${BAZE_URL}/${value}`)
-//   .then(res =>res.json()
-//   .then(res => console.log(res))
-//   .catch(err => console.log(err)));
+//   .then(res =>res.json())
+//   // .then(res => console.log(res))
+//   .then(res => ul.innerHTML = createHTML(res.message))
+//   .catch(err => console.log(err));
 // }
 
 
-// function renderHTML(arr) {
-//   arr.map((el, index)
+// function createHTML(arr) {
+//   return arr.map((el, index) => `<li>
+//   <img src="${el}" alt="Dog picture${index}">
+// </li>`).join('');
 // }
 
 
 
-
+// Завдання 2
 
 // Отримати дані з API та вивести їх на сторінку
 // http://universities.hipolabs.com/search?country=Ukraine
@@ -61,32 +67,34 @@
 // }
 
 
+// Завдання 3
+
 // Отримати дані з API та вивести їх на сторінку
 // http://colormind.io/  api/
 
-// const BAZE_URL = 'http://colormind.io/api/';
+const BAZE_URL = 'http://colormind.io/api/';
 
-// const option ={
-//   metod: 'POST',
-//   body: JSON.stringify({
-//     model: "default"
-//   }
+const option ={
+  metod: 'POST',
+  body: JSON.stringify({
+    model: "default"
+  }
     
-//   )
-// //  headers: {
-// //   'Contend-Type': 'aplication/json'
-// //  }
-// }
+  )
+ headers: {
+  'Contend-Type': 'aplication/json'
+ }
+}
 
-// fetch(BAZE_URL, option).then(res => res.json)
-// .then(data => renderColor(data,result));
+fetch(BAZE_URL, option).then(res => res.json)
+.then(data => renderColor(data,result));
 
 
-// function renderColor (item){
-//   const markup = item.map(([r,b,g])=> 
-//   `<li style="width: 50px; height: 150px; background-color: rgb"></li>`)
+function renderColor (item){
+  const markup = item.map(([r,b,g])=> 
+  `<li style="width: 50px; height: 150px; background-color: rgb"></li>`)
 
-// }
+}
 
 
 
@@ -125,34 +133,34 @@
 // https://randomuser.me/
 
 // Отримати дані з API і вивести їх на сторінку
-//https://reqres.in/
+// //https://reqres.in/
 
-const BAZE_URL = "https://reqres.in/";
-const user = {
-  "name": "morpheus",
-  "job": "leader"
-}
-const option ={
-  metod: 'POST',
-  body: JSON.stringify(user),
-  headers: {
-    Accent: 'application/json',
-    'Content-Type': 'application/json'
-  }
+// const BAZE_URL = "https://reqres.in/";
+// const user = {
+//   "name": "morpheus",
+//   "job": "leader"
+// }
+// const option ={
+//   metod: 'POST',
+//   body: JSON.stringify(user),
+//   headers: {
+//     Accent: 'application/json',
+//     'Content-Type': 'application/json'
+//   }
 
-}
-function fetchResult(){
-  fetch(`${BAZE_URL}api/users`)
-}
-
-
-
-// List API Данні
-// Отримати дані з API та вивести їх на сторінку
-// https://api.publicapis.org/entries
+// }
+// function fetchResult(){
+//   fetch(`${BAZE_URL}api/users`)
+// }
 
 
-fetch('https://api.publicapis.org/entries');
+
+// // List API Данні
+// // Отримати дані з API та вивести їх на сторінку
+// // https://api.publicapis.org/entries
+
+
+// fetch('https://api.publicapis.org/entries');
 
 
 
