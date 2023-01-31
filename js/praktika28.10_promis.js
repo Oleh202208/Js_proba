@@ -72,62 +72,64 @@
 // Отримати дані з API та вивести їх на сторінку
 // http://colormind.io/  api/
 
-const BAZE_URL = 'http://colormind.io/api/';
+// const BAZE_URL = 'http://colormind.io/api/';
+// const ul = document.querySelector('.js-color');
 
-const option ={
-  metod: 'POST',
-  body: JSON.stringify({
-    model: "default"
-  }
-    
-  )
- headers: {
-  'Contend-Type': 'aplication/json'
- }
-}
+// const option ={
+//   method: 'POST',
+//   body: JSON.stringify({
+//     model: "default"
+//   }),
+// //  headers: {
+// //   'Contend-Type': 'aplication/json'
+// //  }
+// }
 
-fetch(BAZE_URL, option).then(res => res.json)
-.then(data => renderColor(data,result));
-
-
-function renderColor (item){
-  const markup = item.map(([r,b,g])=> 
-  `<li style="width: 50px; height: 150px; background-color: rgb"></li>`)
-
-}
+// fetch(BAZE_URL, option)
+// .then(res => res.json()
+// .then (data => renderColor(data.result)));
 
 
+// function renderColor (item){
+//   const markup = item.map(([r,g,b])=> 
+//   `<li style="width:50px; height:40px; background-color:rgb(${r},${g},${b})"></li>`)
+//   .join('');
+// ul.innerHTML = markup;
+// }
 
 
-
+// Завдання 4
 
 // Отримати дані з API і вивести їх на сторінку
 // https://deckofcardsapi.com/
+// https://deckofcardsapi.com/api/deck/<<deck_id>>/draw/?count=2
 
+// const ul = document.querySelector('.js-cards');
 // const BAZE_URL = 'https://deckofcardsapi.com/api/';
 
-// async function shuffleCards() {
-  
+// async function shuffleCards(number) {
 // const response = await fetch(`${BAZE_URL}deck/new/shuffle/?deck_count=${number}`)
 // const result = await response.json();
 // const id = result.deck_id;
-// return id;
+// drowCard(id,5);
 // }
 // shuffleCards(1)
 
 // async function drowCard(id, number) {
-//   const response = await fetch(`${BAZE_URL}deck/${id}/draw/?count${number}`);
-//   const result= await response.json();
-//   return result;
+//   const response = await fetch(`${BAZE_URL}deck/${id}/draw/?count=${number}`);
+//   const result = await response.json();
+//   return cardsMarkup(result.cards);
 // }
 
 // function cardsMarkup(arr){
-//   arr.map(({image, value, suit})=> `<li><img src="${image}"`)
+//   const markup = arr.map(({image, value, suit})=> `<li><img src="${image}"alt="${value} ${suit}"`)
+//   .join('');
+//   ul.innerHTML = markup;
 // }
 
 
 
-
+// Завдання 5
 
 // Отримати дані з API і вивести їх на сторінку
 // https://randomuser.me/
