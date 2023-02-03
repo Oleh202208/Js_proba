@@ -40,6 +40,42 @@
 // http://universities.hipolabs.com/search?country=United+States
 
 
+const BAZE_URL = 'https://api.themoviedb.org/3/trending/movie/day?api_key=';
+const KEY = 'db6a7f7c3b24f4239f0433ba9f35bbff';
+
+const input = document.querySelector('.input');
+const btn = document.querySelector('.fetch');
+const ul = document.querySelector('.js-ul');
+
+btn.addEventListener('click', onBtnClick);
+
+function onBtnClick(e){
+  e.preventDefault();
+  fetch(`${BAZE_URL}${KEY}&titel=${input.value}`)
+  .then(res => res.json())
+  .then(res => createMarkup(res))
+  .catch(err => console.log(err));
+}
+
+
+// async function shuffleCards(number) {
+  // const response = await fetch(`${BAZE_URL}deck/new/shuffle/?deck_count=${number}`)
+  // const result = await response.json();
+  // const id = result.deck_id;
+  // drowCard(id,5);
+  // }
+
+function createMarkup (arr){
+  const markup = arr.map(el => {
+    const {name, web_pages} = el;
+    return `<li><a href="${web_pages[0]}" target="_blank" > ${name}</a></li> `
+  }).join('');
+    ul.innerHTML = markup;
+}
+
+
+
+
 // const BAZE_URL = 'http://universities.hipolabs.com/search?';
 
 // const input = document.querySelector('.input');
@@ -65,7 +101,6 @@
 //   }).join('');
 //     ul.innerHTML = markup;
 // }
-
 
 // Завдання 3
 
